@@ -5,6 +5,11 @@
     font-style: normal;
 }
 
+/* Don't shrink past 270px */
+html, body {
+    min-width: 270px;
+}
+
 body {
     font-family: 'PrintClearly';
     overflow: hidden;
@@ -44,7 +49,15 @@ body {
 
     /* Not bad green background color: #88bb889c */
     /* Not bad red background color: rgb(203, 120, 120) */
+    background-color: rgb(203, 120, 120);
+}
+
+.elevator.working {
     background-color: #88bb889c;
+}
+
+.elevator.working .not {
+    display: none;
 }
 
 .elevator img {
@@ -62,10 +75,28 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
+    .elevator {
+        width: 80%;
+        margin-bottom: 50px;
+    }
+
+    #subtitle {
+        text-align: center;
+    }
 }
 
-/* Is there a better way of responsively resizing text in a container lol */
-@media screen and (max-width: 900px) { .elevator h3 {font-size: 2.25em; }}
-@media screen and (max-width: 590px) { .elevator h3 { font-size: 1.5em; }}
-@media screen and (max-width: 430px) { .elevator h3 { font-size: 1em; }}
-@media screen and (max-width: 300px) { .elevator h3 { font-size: 0.75em; }}
+/* Resize font inside elevator div */
+@media screen and (max-width: 420px) { .elevator h3 { font-size: 2.25em; }}
+
+/* Dark mode settings */
+@media (prefers-color-scheme: dark) {
+    body {
+        filter: invert();
+        background-color: black;
+    }
+
+    .elevator {
+        filter: invert()
+    }
+}
