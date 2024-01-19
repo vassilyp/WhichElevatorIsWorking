@@ -12,7 +12,7 @@ html, body {
 
 body {
     font-family: 'PrintClearly';
-    overflow: hidden;
+    overflow-x: hidden;
 }
 
 #title {
