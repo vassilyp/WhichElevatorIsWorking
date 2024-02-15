@@ -12,6 +12,7 @@ html, body {
 
 body {
     font-family: 'PrintClearly';
+    background-color:#FAF9F6;
 }
 
 #title {
@@ -62,6 +63,9 @@ body {
 .elevator img {
     width: 100%;
     height: 100%;
+
+    /* This helps keep the footer in frame for bigger screens */
+    max-height: 300px;
 }
 
 .elevator h3 {
@@ -69,6 +73,26 @@ body {
     margin-top: 10px;
     margin-bottom: 0;
 }
+
+#footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+.footer-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.footer-link p {
+    margin: 0.5rem 0;
+}
+
+/* Keep link color consistent */
+.footer-link p a {color: #0066cc};
+.footer-link p a:visited {color: #0066cc};
 
 @media screen and (max-width: 900px) {
     #elevators {
@@ -91,22 +115,5 @@ body {
 
 /* Dark mode settings */
 @media (prefers-color-scheme: dark) {
-    body {
-        filter: invert();
-        background-color: black;
-    }
-
-    .elevator {
-        filter: invert()
-    }
-
-    #title::-moz-selection,
-    #subtitle::-moz-selection { /* Code for Firefox */
-        background: orange;
-    }
-      
-    #title::selection,
-    #subtitle::selection {
-        background: orange;
-    }
+    
 }
