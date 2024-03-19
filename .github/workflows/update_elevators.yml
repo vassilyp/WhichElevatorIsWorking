@@ -18,10 +18,8 @@ jobs:
       - name: Check out repository code
         uses: actions/checkout@v4
 
-        
-        
       - run: echo "Left elevator working? ${{ inputs.elevator-left }}."
       - run: echo "Right elevator working? ${{inputs.elevator-right}}."
 
       - name: Run update_elevators.js
-        run: python ./update_elevators.py
+        run: python ./update_elevators.py ${{ inputs.elevator-left }} ${{ inputs.elevator-right }}
