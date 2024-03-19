@@ -1,0 +1,3 @@
+# specifies what pip dependencies to install for github actions
+
+beautifulsoup4
