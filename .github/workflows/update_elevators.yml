@@ -30,3 +30,10 @@ jobs:
 
       - name: Run update_elevators
         run: python ./update_elevators.py ${{ inputs.elevator-left }} ${{ inputs.elevator-right }}
+
+      - name: Commit elevator status update
+        run: |
+          git config --global user.name 'Vassily-Petrousevitch'
+          git config --global user.email 'Vassily-Petrousevitch@users.noreply.github.com'
+          git commit -am "Automated update"
+          git push
