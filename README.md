@@ -2,7 +2,7 @@
 
 This is a simple website (HTML/CSS) to show whether the elevators in Marine Drive are operational. The project was inspired by one of the elevators in my dorm being down for 3-4 months, and the other being less than reliable!
 
-Check out the website here: https://vassily-petrousevitch.github.io/WhichElevatorIsWorking/
+Check out the website here: https://vassilyp.github.io/WhichElevatorIsWorking/
 
 
 ### Moving parts:
